@@ -17,13 +17,9 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true,
-    connectTimeoutMS: 10000 // Increase to 10 seconds
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
 
 // Define a schema for NFT metadata
 const nftSchema = new mongoose.Schema({
@@ -42,7 +38,6 @@ const NFT = mongoose.model('NFT', nftSchema);
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-// Upload and save file to IPFS
 app.post('/uploadToIPFS', upload.single('file'), async (req, res) => {
     try {
         const file = req.file;
@@ -62,11 +57,11 @@ app.post('/uploadToIPFS', upload.single('file'), async (req, res) => {
         // Pinata API endpoint for uploading files to IPFS
         const url = 'https://api.pinata.cloud/pinning/pinFileToIPFS';
 
-        // Pinata API headers
+        // Hardcoded Pinata API headers
         const headers = {
             ...formData.getHeaders(),
-            pinata_api_key: process.env.PINATA_API_KEY,
-            pinata_secret_api_key: process.env.PINATA_SECRET_API_KEY,
+            pinata_api_key: '954ccb5f78f3dee79078',           // Hardcoded API Key
+            pinata_secret_api_key: '4c50abf672cb63711f350307b79f4a23da2ceec84849b01be03d458d80bf1992' // Hardcoded Secret API Key
         };
 
         // Make the request to Pinata
@@ -86,6 +81,7 @@ app.post('/uploadToIPFS', upload.single('file'), async (req, res) => {
         res.status(500).json({ success: false, message: 'IPFS upload failed', error: error.message });
     }
 });
+
 
 // Route to create and save NFT metadata
 app.post('/nfts', async (req, res) => {

@@ -90,7 +90,7 @@ const CreateNFT = ({ onNFTCreated }) => {
         formData.append('file', file);
 
         try {
-            const response = await fetch('https://hackindia-2024-emosort.onrender.com/uploadToIPFS', {
+            const response = await fetch('http://localhost:5000/uploadToIPFS', {
                 method: 'POST',
                 body: formData,
             });
