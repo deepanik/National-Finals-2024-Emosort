@@ -25,7 +25,7 @@ const Marketplace = () => {
   const [currentAccount, setCurrentAccount] = useState(null);
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const CONTRACT_ADDRESS = '0x9790C431F0e5663A907c2494060C28FEC17E52f2'; // Replace with your contract address
+  const CONTRACT_ADDRESS = '0xCE80D0c8b2E6cdaBEc05fCd27fCFA66F9B95E630';
 
   useEffect(() => {
     checkWalletConnection();

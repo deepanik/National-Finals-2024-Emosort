@@ -32,7 +32,7 @@ const CreateNFT = ({ onNFTCreated }) => {
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
     const [errorMessage, setErrorMessage] = useState('');
 
-    const CONTRACT_ADDRESS = '0x9790C431F0e5663A907c2494060C28FEC17E52f2';
+    const CONTRACT_ADDRESS = '0xCE80D0c8b2E6cdaBEc05fCd27fCFA66F9B95E630';
 
     useEffect(() => {
         checkWalletConnection();
