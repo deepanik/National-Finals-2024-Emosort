@@ -7,10 +7,6 @@ import backgroundImg from './Images/homebg.avif'; // Import background image
 import logoImg from './Images/logo1.jpeg'; // Import the logo image
 import contractABI from './keys/DigitalFileMarketplaceABI.json';
 
-// import createNFT from './CreateNFT';
-// import UserControl from './UserControl';
-// import Marketplace from './Marketplace';
-
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

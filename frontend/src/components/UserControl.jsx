@@ -50,7 +50,7 @@ const UserControl = () => {
     const [approvalAddress, setApprovalAddress] = useState('');
     const [sellPrice, setSellPrice] = useState('');
 
-    const CONTRACT_ADDRESS = '0x8d7435Df48B0f6DFc8e83A2f51014438Ccb42033';
+    const CONTRACT_ADDRESS = '0x9790C431F0e5663A907c2494060C28FEC17E52f2';
     const web3 = new Web3(window.ethereum);
 
     useEffect(() => {
