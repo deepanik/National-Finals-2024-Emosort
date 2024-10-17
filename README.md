@@ -15,12 +15,19 @@ This project is an NFT marketplace built with **React**, **Material UI**, **Tail
 ---
 
 ## Demo
+![NFT Marketplace Screenshot](https://github.com/user-attachments/assets/f67c945d-4165-477d-b5c3-017bd7ec68a2)
 
-Add a screenshot or demo link here.
-![image](https://github.com/user-attachments/assets/f67c945d-4165-477d-b5c3-017bd7ec68a2)
-![image](https://github.com/user-attachments/assets/f49b0674-a8e0-4032-9cf9-390b9a0f99e8)
-![image](https://github.com/user-attachments/assets/2d842980-4fb9-46c4-988f-8a9c42bd485d)
-![image](https://github.com/user-attachments/assets/631799a7-db88-48e4-91df-a8c9061c7be5)
+---
+![NFT Purchase Flow](https://github.com/user-attachments/assets/f49b0674-a8e0-4032-9cf9-390b9a0f99e8)
+
+---
+
+![NFT Card Hover Effect](https://github.com/user-attachments/assets/2d842980-4fb9-46c4-988f-8a9c42bd485d)
+
+---
+
+![Transaction Successful](https://github.com/user-attachments/assets/631799a7-db88-48e4-91df-a8c9061c7be5)
+
 
 ---
 
